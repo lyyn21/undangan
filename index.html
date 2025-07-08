@@ -272,7 +272,7 @@
                 <div class="flex flex-col md:flex-row justify-center items-center gap-12 mt-12 max-w-5xl mx-auto">
                     <div class="w-full md:w-1/2">
                         <!-- FOTO WINDA TELAH DIGANTI -->
-                        <img src="[url=https://ibb.co/MyBQ2NC5][img]https://i.ibb.co/JW3gBksF/IMG-5846-copy.jpg[/img][/url]" alt="Foto Winda" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
+                        <img src="https://i.ibb.co/JW3gBks/IMG-5846-copy.jpg" alt="Foto Winda" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
                         <h3 class="font-display text-4xl text-amber-800 mt-6">Winda Septiawati</h3>
                         <p class="mt-2 text-gray-600">Putri dari Bapak I Gede Sumantra & Ibu Ni Wayan Sari</p>
                     </div>
@@ -401,14 +401,22 @@
     <script type="module">
         // Import fungsi yang diperlukan dari SDK
         import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, signInWithCustomToken, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+        import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
         import { getFirestore, collection, addDoc, query, onSnapshot, serverTimestamp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
         document.addEventListener('DOMContentLoaded', () => {
 
             // --- Konfigurasi dan Inisialisasi Firebase ---
-            const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-wedding-app';
-            const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : {};
+            const appId = "winda-hendrik-wedding"; 
+            const firebaseConfig = {
+                apiKey: "AIzaSyBEcleEI_mxbsSbb8FESHpAZ9G1CC1NSUY",
+                authDomain: "undangan-winda-hendrik.firebaseapp.com",
+                projectId: "undangan-winda-hendrik",
+                storageBucket: "undangan-winda-hendrik.appspot.com",
+                messagingSenderId: "739965928602",
+                appId: "1:739965928602:web:42807cd7b099b0fdf44b23",
+                measurementId: "G-RG81HRF309"
+            };
             const app = initializeApp(firebaseConfig);
             const db = getFirestore(app);
             const auth = getAuth(app);
@@ -664,7 +672,7 @@
                 const prompt = "Tuliskan ucapan pernikahan yang singkat, indah, dan menyentuh untuk pasangan bernama Winda dan Hendrik.";
                 let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];
                 const payload = { contents: chatHistory };
-                const apiKey = ""; // Disediakan oleh environment
+                const apiKey = firebaseConfig.apiKey; // Menggunakan API Key dari config
                 const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
                 try {
@@ -758,23 +766,13 @@
             });
 
             // Otentikasi dan muat data
-            onAuthStateChanged(auth, (user) => {
-                if (user) {
-                    console.log("User signed in:", user.uid);
-                    renderMessages();
-                }
-            });
-
             async function authAndLoad() {
                 try {
-                    const token = typeof __initial_auth_token !== 'undefined' ? __initial_auth_token : null;
-                    if (token) {
-                        await signInWithCustomToken(auth, token);
-                    } else {
-                        await signInAnonymously(auth);
-                    }
+                    await signInAnonymously(auth);
+                    console.log("Otentikasi anonim berhasil.");
+                    renderMessages();
                 } catch (error) {
-                    console.error("Otentikasi gagal:", error);
+                    console.error("Otentikasi gagal. Pastikan 'Anonymous' sign-in diaktifkan di Firebase Console.", error);
                 }
             }
             
