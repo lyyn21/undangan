@@ -46,7 +46,7 @@
             background-color: #F5EFE6; /* Warna kertas lontar */
             border: 2px solid #D4AF37; /* Border emas tipis */
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-            padding: 2rem 3rem;
+            padding: 2rem 1.5rem;
             border-radius: 5px;
             position: relative;
         }
@@ -163,12 +163,19 @@
         }
 
         .carousel-img {
-            height: 250px; /* Tinggi foto disesuaikan */
+            height: 200px; /* Tinggi foto disesuaikan untuk mobile */
             width: auto;
             border-radius: 0.75rem;
             cursor: pointer;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
+        
+        @media (min-width: 768px) {
+            .carousel-img {
+                height: 250px;
+            }
+        }
+
 
         .carousel-img.zoomed {
             transform: scale(1.1);
@@ -212,7 +219,7 @@
     <div id="cover" class="batik-bg">
         <div class="text-center text-white p-8 relative z-10">
             <p class="font-serif-elegant text-xl tracking-widest text-gray-200 mb-4">The Wedding Of</p>
-            <h1 class="font-display text-6xl md:text-8xl text-yellow-300" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">
+            <h1 class="font-display text-5xl md:text-8xl text-yellow-300" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">
                 Winda & Hendrik
             </h1>
             <div class="w-24 h-0.5 bg-yellow-400 mx-auto my-8"></div>
@@ -247,7 +254,7 @@
                     <path d="M12 2L3.5 10.5L4.5 11.5L12 4L19.5 11.5L20.5 10.5L12 2ZM4.5 13.5V22H19.5V13.5L12 21L4.5 13.5Z"/>
                 </svg>
 
-                <h1 class="font-display text-6xl md:text-8xl text-yellow-300" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">
+                <h1 class="font-display text-5xl md:text-8xl text-yellow-300" style="text-shadow: 2px 2px 5px rgba(0,0,0,0.5);">
                     Winda & Hendrik
                 </h1>
                 <div class="w-24 h-0.5 bg-yellow-400 mx-auto my-8"></div>
@@ -265,23 +272,23 @@
 
         <main class="bg-[#FDFBF5]">
             <section id="pasangan" class="py-20 px-6 text-center animate-on-scroll">
-                <h2 class="font-display text-4xl text-amber-900 mb-4">Dengan Memohon Rahmat & Ridho Allah SWT</h2>
-                <p class="max-w-3xl mx-auto text-lg text-gray-700">
+                <h2 class="font-display text-3xl md:text-4xl text-amber-900 mb-4">Dengan Memohon Rahmat & Ridho Allah SWT</h2>
+                <p class="max-w-3xl mx-auto text-base md:text-lg text-gray-700">
                     Kami bermaksud menyelenggarakan acara pernikahan putra-putri kami, dan dengan penuh rasa hormat mengundang Bapak/Ibu/Saudara/i untuk memberikan doa restu.
                 </p>
-                <div class="flex flex-col md:flex-row justify-center items-center gap-12 mt-12 max-w-5xl mx-auto">
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-12 mt-12 max-w-5xl mx-auto">
                     <div class="w-full md:w-1/2">
-                        <!-- FOTO WINDA TELAH DIGANTI -->
-                        <img src="https://i.ibb.co/JW3gBks/IMG-5846-copy.jpg" alt="Foto Winda" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
-                        <h3 class="font-display text-4xl text-amber-800 mt-6">Winda Septiawati</h3>
-                        <p class="mt-2 text-gray-600">Putri dari Bapak I Gede Sumantra & Ibu Ni Wayan Sari</p>
+                        <!-- FOTO WINDA TELAH DIPERBAIKI -->
+                        <img src="https://i.imghippo.com/files/yAf3708bIM.png" alt="Foto Winda" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
+                        <h3 class="font-display text-3xl md:text-4xl text-amber-800 mt-6">Winda Septiawati, S.M</h3>
+                        <p class="mt-2 text-sm md:text-base text-gray-600">Putri dari Bapak Ngadeno & Ibu Watini</p>
                     </div>
-                    <div class="font-display text-5xl text-yellow-500">&</div>
+                    <div class="font-display text-4xl md:text-5xl text-yellow-500">&</div>
                     <div class="w-full md:w-1/2">
                         <!-- FOTO HENDRIK TELAH DIGANTI -->
-                        <img src="https://drive.google.com/uc?export=view&id=1b8xWyyE0AQCImASr1MMmXof86SPp11w9" alt="Foto Hendrik" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
-                        <h3 class="font-display text-4xl text-amber-800 mt-6">Hendrik Salim</h3>
-                        <p class="mt-2 text-gray-600">Putra dari Bapak Drs. Bambang Susilo & Ibu Dra. Endang Puspita</p>
+                        <img src="https://i.imghippo.com/files/MLE2455bMM.png" alt="Foto Hendrik" class="w-48 h-48 rounded-full mx-auto object-cover border-4 border-yellow-500 shadow-lg">
+                        <h3 class="font-display text-3xl md:text-4xl text-amber-800 mt-6">Hendrik  Salim, S.T</h3>
+                        <p class="mt-2 text-sm md:text-base text-gray-600">Putra dari Bapak Yasibun & Ibu Aminah</p>
                     </div>
                 </div>
             </section>
@@ -289,7 +296,7 @@
             <section id="kisah" class="py-20 px-6 bg-amber-50 animate-on-scroll">
                 <div class="max-w-4xl mx-auto">
                     <div class="lontar-scroll">
-                        <h2 class="font-display text-4xl text-amber-900 text-center mb-6">Kisah Kami</h2>
+                        <h2 class="font-display text-3xl md:text-4xl text-amber-900 text-center mb-6">Kisah Kami</h2>
                         <p class="text-gray-700 leading-relaxed text-justify">
                             Berawal dari sebuah pertemuan tak terduga, takdir menuntun kami pada sebuah perjalanan. Canda tawa dan cerita menjadi benang yang merajut hari-hari kami. Melewati berbagai musim, rasa itu tumbuh, mengakar kuat di hati. Kini, dengan restu semesta, kami beranikan diri untuk melangkah ke gerbang baru, menyatukan dua jiwa dalam ikrar suci. Sebuah kisah sederhana yang kami harap akan abadi selamanya.
                         </p>
@@ -299,59 +306,59 @@
 
             <!-- --- GALERI 2 BARIS BARU --- -->
             <section id="galeri" class="py-20 px-6 text-center animate-on-scroll overflow-hidden space-y-4">
-                <h2 class="font-display text-4xl text-amber-900 mb-8">Momen Bahagia Kami</h2>
+                <h2 class="font-display text-3xl md:text-4xl text-amber-900 mb-8">Galeri </h2>
                 <!-- Baris Atas -->
                 <div class="carousel-viewport">
                     <div class="carousel-track">
                         <!-- FOTO GALERI ATAS TELAH DIGANTI -->
-                        <img src="https://drive.google.com/uc?export=view&id=1sriwFrw-fHM5L5onLFkqgnvdpHk1NsHt" alt="Foto 1" class="carousel-img">
-                        <img src="https://drive.google.com/uc?export=view&id=1VoNbvcXncwMGqks7WfH8V1O9Exn_BcRU" alt="Foto 2" class="carousel-img">
-                        <img src="https://drive.google.com/uc?export=view&id=1Blb8aWc6_DN82BmfyOS7tMdDLF9-qvu0" alt="Foto 3" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/RXh5133QdY.jpg" alt="Foto 1" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/LJ9965GoI.jpg" alt="Foto 2" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/ONv7356g.jpg" alt="Foto 3" class="carousel-img">
                     </div>
                 </div>
                 <!-- Baris Bawah -->
                 <div class="carousel-viewport">
                     <div class="carousel-track reverse">
                         <!-- FOTO GALERI BAWAH TELAH DIGANTI -->
-                        <img src="https://drive.google.com/uc?export=view&id=1sjPxu0FktBz5RMVMiq1vWzFdmMbZKaUC" alt="Foto 4" class="carousel-img">
-                        <img src="https://drive.google.com/uc?export=view&id=1EpAWBI7YlzZbH4vqN2pquljLAYrdiY5o" alt="Foto 5" class="carousel-img">
-                        <img src="https://drive.google.com/uc?export=view&id=1z3NeEMuwsPc-Cr6phTJQaO-0N-GtgwDb" alt="Foto 6" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/ADob4150PhA.jpg" alt="Foto 4" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/eAo2126vpc.jpg" alt="Foto 5" class="carousel-img">
+                        <img src="https://i.imghippo.com/files/tTZ5200Pc.jpg" alt="Foto 6" class="carousel-img">
                     </div>
                 </div>
             </section>
 
             <section id="acara" class="py-20 px-6 bg-amber-50 animate-on-scroll">
-                <h2 class="font-display text-4xl text-amber-900 text-center mb-12">Waktu & Tempat Acara</h2>
+                <h2 class="font-display text-3xl md:text-4xl text-amber-900 text-center mb-12">Waktu & Tempat Acara</h2>
                 <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
                     <!-- ALAMAT BARU -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-yellow-500">
-                        <h3 class="font-display text-3xl text-amber-800">Akad Nikah</h3>
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg text-center border-t-4 border-yellow-500">
+                        <h3 class="font-display text-2xl md:text-3xl text-amber-800">Akad Nikah</h3>
                         <div class="w-16 h-0.5 bg-yellow-500 mx-auto my-4"></div>
-                        <p class="text-lg font-bold">Jumat, 29 Agustus 2025</p>
-                        <p class="text-lg">Pukul 09:00 - 11:00 WIB</p>
-                        <p class="mt-4 text-gray-600 font-semibold">Gedung Serbaguna Puspawarman</p>
-                        <p class="text-sm text-gray-500">Jl. Puspawarman, Kalijaga, Kec. Harjamukti, Kota Cirebon</p>
+                        <p class="text-base md:text-lg font-bold">Jumat, 29 Agustus 2025</p>
+                        <p class="text-base md:text-lg">Pukul 06:00 WIB - Selesai</p>
+                        <p class="mt-4 text-gray-600 font-semibold">Desa Sidaharja, Pamarican</p>
+                        <p class="text-sm text-gray-500 px-2">Kabupaten Ciamis, Jawa Barat</p>
                     </div>
                     <!-- ALAMAT BARU -->
-                    <div class="bg-white p-8 rounded-lg shadow-lg text-center border-t-4 border-yellow-500">
-                        <h3 class="font-display text-3xl text-amber-800">Resepsi</h3>
+                    <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg text-center border-t-4 border-yellow-500">
+                        <h3 class="font-display text-2xl md:text-3xl text-amber-800">Resepsi</h3>
                         <div class="w-16 h-0.5 bg-yellow-500 mx-auto my-4"></div>
-                        <p class="text-lg font-bold">Jumat, 29 Agustus 2025</p>
-                        <p class="text-lg">Pukul 19:00 - 21:00 WIB</p>
-                        <p class="mt-4 text-gray-600 font-semibold">Gedung Serbaguna Puspawarman</p>
-                        <p class="text-sm text-gray-500">Jl. Puspawarman, Kalijaga, Kec. Harjamukti, Kota Cirebon</p>
+                        <p class="text-base md:text-lg font-bold">Jumat, 29 Agustus 2025</p>
+                        <p class="text-base md:text-lg">Pukul 08:00 WIB - Selesai</p>
+                        <p class="mt-4 text-gray-600 font-semibold">Desa Sidaharja, Pamarican</p>
+                        <p class="text-sm text-gray-500 px-2">Kabupaten Ciamis, Jawa Barat</p>
                     </div>
                 </div>
                 <!-- PETA BARU -->
                 <div class="max-w-6xl mx-auto mt-10 rounded-lg overflow-hidden shadow-xl">
-                    <a href="https://maps.app.goo.gl/47atatuKxmcWM3KAA" target="_blank" class="block btn-gold text-center py-3 rounded-t-lg font-bold">Buka di Google Maps</a>
-                    <iframe id="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3962.339659955325!2d108.5413583749947!3d-6.728946993267191!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1d8665736379%3A0x60f69c07b66236b!2sGedung%20Serbaguna%20Puspawarman!5e0!3m2!1sen!2sid!4v1720436987175!5m2!1sen!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <a href="https://www.google.com/maps?q=-7.547083,108.814805" target="_blank" class="block btn-gold text-center py-3 rounded-t-lg font-bold">Buka di Google Maps</a>
+                    <iframe id="map-frame" src="https://www.google.com/maps?q=-7.547083,108.814805&z=17&output=embed" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
 
             <section id="ucapan" class="py-20 px-6 animate-on-scroll">
                 <div class="max-w-3xl mx-auto">
-                    <h2 class="font-display text-4xl text-amber-900 text-center mb-4">Buku Tamu & Ucapan</h2>
+                    <h2 class="font-display text-3xl md:text-4xl text-amber-900 text-center mb-4">Buku Tamu & Ucapan</h2>
                     <p class="text-center text-gray-600 mb-10">Kehadiran dan doa restu Anda adalah anugerah terindah bagi kami.</p>
                     <div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-yellow-500">
                         <form id="rsvp-form">
@@ -379,11 +386,15 @@
             </section>
 
             <section id="hadiah" class="py-20 px-6 bg-amber-50 text-center animate-on-scroll">
-                <h2 class="font-display text-4xl text-amber-900 mb-4">Tanda Kasih</h2>
+                <h2 class="font-display text-3xl md:text-4xl text-amber-900 mb-4">Tanda Kasih</h2>
                 <p class="max-w-2xl mx-auto text-gray-600 mb-10">Doa restu Anda merupakan karunia yang sangat berarti bagi kami. Namun, jika memberi adalah ungkapan tanda kasih, Anda dapat memberi kado secara digital.</p>
-                <div class="flex flex-col md:flex-row justify-center gap-6">
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-80"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png" alt="Logo BCA" class="h-8 mx-auto mb-4"><p class="text-lg font-semibold">a/n Winda Septiawati</p><p id="bca-rek" class="text-2xl font-bold my-2 text-amber-800">123 456 7890</p><button class="btn-gold py-2 px-5 rounded-full text-sm" onclick="copyToClipboard('bca-rek', this)">Salin No. Rek.</button></div>
-                    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-80"><img src="https://upload.wikimedia.org/wikipedia/id/thumb/5/55/BNI_logo.svg/1280px-BNI_logo.svg.png" alt="Logo BNI" class="h-8 mx-auto mb-4"><p class="text-lg font-semibold">a/n Hendrik Salim</p><p id="bni-rek" class="text-2xl font-bold my-2 text-amber-800">098 765 4321</p><button class="btn-gold py-2 px-5 rounded-full text-sm" onclick="copyToClipboard('bni-rek', this)">Salin No. Rek.</button></div>
+                <div class="flex justify-center">
+                    <div class="bg-white p-6 rounded-lg shadow-lg w-full md:w-80">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/2560px-Bank_Central_Asia.svg.png" alt="Logo BCA" class="h-8 mx-auto mb-4">
+                        <p class="text-lg font-semibold">a/n Hendrik Salim</p>
+                        <p id="bca-rek" class="text-2xl font-bold my-2 text-amber-800">4340070459</p>
+                        <button class="btn-gold py-2 px-5 rounded-full text-sm" onclick="copyToClipboard('bca-rek', this)">Salin No. Rek.</button>
+                    </div>
                 </div>
             </section>
         </main>
@@ -783,7 +794,7 @@
         });
 
         // --- Fungsi Global ---
-        function copyToClipboard(elementId, button) {
+        window.copyToClipboard = function(elementId, button) {
             const textToCopy = document.getElementById(elementId).innerText;
             const tempTextArea = document.createElement('textarea');
             tempTextArea.value = textToCopy;
